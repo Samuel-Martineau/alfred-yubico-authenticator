@@ -1,7 +1,7 @@
 {
   "name": "alfred-yubico-authenticator",
   "type": "module",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Alfred workflow to generate YubiKey OTPs",
   "main": "index.js",
   "repository": {
