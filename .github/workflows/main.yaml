@@ -25,13 +25,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > .npmrc
+      - run: npm config set registry https://npm.pkg.github.com && npm config set //npm.pkg.github.com/:_authToken "$NODE_AUTH_TOKEN"
         env:
           NODE_AUTH_TOKEN: ${{ github.token }}
-      - run: cat .npmrc
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   create-release:
     runs-on: macos-latest
     permissions: write-all
