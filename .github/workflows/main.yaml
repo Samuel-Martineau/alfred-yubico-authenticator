@@ -17,6 +17,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   publish-gpr:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -33,7 +36,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - run: plutil -insert description -string "$(cat package.json | jq -r '.description')" info.plist
       - run: plutil -insert version -string "$(cat package.json | jq -r '.version')" info.plist
       - run: plutil -insert webaddress -string "$(cat package.json | jq -r '.homepage')" info.plist
