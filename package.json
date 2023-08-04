@@ -1,9 +1,10 @@
 {
   "name": "alfred-yubico-authenticator",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alfred workflow to generate YubiKey OTPs",
   "main": "index.js",
+  "repository": "github:Samuel-Martineau/alfred-yubico-authenticator",
   "author": {
     "email": "samuel@smartineau.me",
     "name": "Samuel Martineau",
