@@ -196,7 +196,8 @@ echo "$(ykman oath accounts code "$query"; echo)" | awk '{print $2}' | tr -d '\n
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Yubico Authenticator for Alfred
+For more information, visit: https://github.com/Samuel-Martineau/alfred-yubico-authenticator</string>
 	<key>uidata</key>
 	<dict>
 		<key>0923E3BC-1B9A-4CB9-A4B3-B741A3FFBF8D</key>
