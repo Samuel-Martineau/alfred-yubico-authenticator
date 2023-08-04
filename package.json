@@ -1,0 +1,21 @@
+{
+  "name": "alfred-yubico-authenticator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Alfred workflow to generate YubiKey OTPs",
+  "main": "index.js",
+  "author": {
+    "email": "samuel@smartineau.me",
+    "name": "Samuel Martineau",
+    "url": "https://smartineau.me"
+  },
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "alfy": "^1.1.0",
+    "execa": "^7.2.0"
+  }
+}
